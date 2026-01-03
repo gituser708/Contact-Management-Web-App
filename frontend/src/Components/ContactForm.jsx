@@ -56,7 +56,7 @@ export default function ContactForm({ onSuccess }) {
         };
 
         const response = await axios.post(
-          "http://localhost:5000/api/contact-form",
+          "https://contact-management-web-app-e7cs.onrender.com/api/contact-form",
           payload
         );
 

@@ -6,7 +6,9 @@ export default function Contacts({ contacts, setContacts }) {
     if (!window.confirm("Are you sure you want to delete this contact?"))
       return;
     try {
-      const res = await axios.delete(`http://localhost:5000/api/delete/${id}`);
+      const res = await axios.delete(
+        `https://contact-management-web-app-e7cs.onrender.com/api/delete/${id}`
+      );
       setContacts((prev) => prev.filter((contact) => contact._id !== id));
       toast.success(res?.data?.message || "Contact deleted");
     } catch (error) {

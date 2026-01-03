@@ -9,7 +9,9 @@ export default function App() {
   React.useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/contacts");
+        const res = await axios.get(
+          "https://contact-management-web-app-e7cs.onrender.com/api/contacts"
+        );
         setContacts(res.data);
       } catch (err) {
         console.error("Failed to fetch contacts", err);
